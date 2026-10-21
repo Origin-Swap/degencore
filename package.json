@@ -1,0 +1,35 @@
+{
+  "name": "ascend-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^4.3.7",
+    "@metamask/sdk": "^0.34.0",
+    "@rainbow-me/rainbowkit": "^2.2.11",
+    "@safe-global/safe-apps-provider": "^0.18.6",
+    "@tanstack/react-query": "^5.102.8",
+    "@wagmi/connectors": "^7.0.2",
+    "@walletconnect/ethereum-provider": "^2.24.0",
+    "lucide-react": "^0.445.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.7.0",
+    "react-router-dom": "^6.26.2",
+    "recharts": "^2.12.7",
+    "viem": "^2.56.3",
+    "wagmi": "^2.19.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.8"
+  }
+}

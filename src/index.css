@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* === LIGHT MODE (Default) === */
+  :root {
+    --color-canvas: 245 246 242;      /* #F5F6F2 */
+    --color-surface: 255 255 255;     /* #FFFFFF */
+    --color-surface-alt: 239 241 233; /* #EFF1E9 */
+    --color-border: 227 229 219;      /* #E3E5DB */
+    --color-border-strong: 203 207 193;/* #CBCFC1 */
+    --color-ink: 19 21 26;            /* #13151A */
+    --color-ink-soft: 99 102 92;      /* #63665C */
+    --color-ink-faint: 148 152 140;   /* #94988C */
+    --color-lime: 198 241 53;         /* #C6F135 */
+    --color-lime-dark: 169 214 42;    /* #A9D62A */
+    --color-lime-ink: 29 36 0;        /* #1D2400 */
+    --color-indigo: 91 91 214;        /* #5B5BD6 */
+    --color-indigo-soft: 238 238 251; /* #EEEEFB */
+    --color-up: 31 169 113;           /* #1FA971 */
+    --color-down: 229 72 77;          /* #E5484D */
+  }
+
+  /* === DARK MODE (Mengikuti Logo) === */
+  .dark {
+    --color-canvas: 5 8 15;           /* #05080F (Cyber Dark Blue) */
+    --color-surface: 15 20 32;        /* #0F1420 (Dark Slate) */
+    --color-surface-alt: 26 32 48;    /* #1A2030 */
+    --color-border: 32 41 60;         /* #20293C */
+    --color-border-strong: 45 56 80;  /* #2D3850 */
+    --color-ink: 255 255 255;         /* #FFFFFF */
+    --color-ink-soft: 156 163 175;    /* #9CA3AF */
+    --color-ink-faint: 107 114 128;   /* #6B7280 */
+    --color-lime: 54 255 114;         /* #36FF72 (Neon Green dari Logo) */
+    --color-lime-dark: 34 197 94;     /* #22C55E */
+    --color-lime-ink: 5 8 15;         /* #05080F (Teks hitam saat tombol hijau) */
+    --color-indigo: 129 140 248;      /* #818CF8 */
+    --color-indigo-soft: 49 46 129;   /* #312E81 */
+    --color-up: 74 222 128;           /* #4ADE80 */
+    --color-down: 248 113 113;        /* #F87171 */
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-lime/60 text-lime-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-lime));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--color-border-strong)) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgb(var(--color-border-strong));
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-xl border border-border bg-surface px-3.5 py-2.5 text-sm text-ink outline-none placeholder:text-ink-faint transition-colors;
+  }
+  .input:focus {
+    @apply border-ink-soft;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
