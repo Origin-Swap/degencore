@@ -7,6 +7,6 @@
 // mock dataset in src/data/mockData.js is never imported from; when it's
 // false (no env var set — e.g. plain `vite dev` with no backend running),
 // pages fall back to the bundled mock data so the UI still renders.
-export const API_BASE_URL = "https://qurve.online";
+export const API_BASE_URL = "https://api.degencore.fun";
 // export const API_BASE_URL = "http://localhost:4000";
 export const BACKEND_CONNECTED = Boolean(API_BASE_URL);
