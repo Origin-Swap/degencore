@@ -33,7 +33,7 @@ export default function TradePanel({ token, onTradeConfirmed }) {
 
   const { address, isConnected } = useAccount();
 
-  const pairIsNative = token.pairSymbol === "BOT";
+  const pairIsNative = token.pairSymbol === "ETH";
   const pairDecimals = pairIsNative ? 18 : 6;
   const tokenDecimals = 18;
 

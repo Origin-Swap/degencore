@@ -126,7 +126,7 @@ function RewardSwapWidget({ token, chainId }) {
   const [slippage, setSlippage] = useState(1);
   const [showSettings, setShowSettings] = useState(false);
 
-  const pairIsNative = token.pairSymbol === "BOT";
+  const pairIsNative = token.pairSymbol === "ETH";
   const pairDecimals = pairIsNative ? 18 : 6;
   const tokenDecimals = 18;
   const isBuy = side === "buy";
@@ -497,7 +497,7 @@ function PoolStats({ token }) {
     query: { enabled: Boolean(token.dexPairAddress) },
   });
 
-  const pairDecimals = token.pairSymbol === "BOT" ? 18 : 6;
+  const pairDecimals = token.pairSymbol === "ETH" ? 18 : 6;
 
   const stats = useMemo(() => {
     const reserves = reads.data?.[0]?.result;
